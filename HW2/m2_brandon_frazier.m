@@ -15,7 +15,22 @@ delays = mu .* randn(1000, 1) + stdDev;
 
 %% PART THREE
 
-eleven = sum((delays < 15 * 10^-3) &  (delays > 11 * 10^-3))
+val = sum((delays < 15 * 10^-3) &  (delays > 11 * 10^-3));
+Pexp = val/size(delays)
 
+%% PART FOUR (tentative)
 
+relError = ((Pexp - Ptheory)/Ptheory) * 100;
 
+%% PART FIVE (tentative)
+
+hold on 
+
+% PART A
+
+plot(normpdf([3*10^-3 17*10^-3])
+
+% PART B
+histogram(delays)
+
+hold off
